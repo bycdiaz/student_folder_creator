@@ -21,8 +21,12 @@ def folders(admit_201915)
     name = name.split(", ")
     first_name = name[-1]
     last_name = name[0]
-    Dir.mkdir "#{last_name}-#{first_name}-#{id}"
-    FileUtils.cp 'master-2018+ plan of study.xlsx', "#{last_name}-#{first_name}-#{id}/#{last_name}_#{first_name}_#{id}_UG_plan_of_study.xlsx"
+    Dir.mkdir "output/#{last_name}-#{first_name}-#{id}"
+    Dir.mkdir "output/#{last_name}-#{first_name}-#{id}/forms"
+    Dir.mkdir "output/#{last_name}-#{first_name}-#{id}/plans-of-study"
+    Dir.mkdir "output/#{last_name}-#{first_name}-#{id}/plans-of-study/undergraduate"
+    Dir.mkdir "output/#{last_name}-#{first_name}-#{id}/plans-of-study/bs-ms"
+    FileUtils.cp 'master-2018+ plan of study.xlsx', "output/#{last_name}-#{first_name}-#{id}//plans-of-study/undergraduate/#{last_name}_#{first_name}_#{id}_UG_plan_of_study.xlsx"
   }
 end
 
